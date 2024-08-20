@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Status Pemesanan</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/637b45b8b3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/statusPemesanan-style.css">
+</head>
+<body>
+    <!-- NAVBAR -->
+    <header class="sticky-top py-3">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-2">
+              <a href="#" class="navbar-brand">
+                <img src="img/logo.png" alt="Travelo Logo" height="30">
+                <span class="logo-name ml-2" style="color: black;">PMJ Trans</span>
+              </a>
+            </div>
+            <div class="col-md-8 d-none d-md-block">
+              <ul class="nav justify-content-center">
+                <li class="nav-item"><a class="nav-link" href="#">Beranda</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Bus</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Tentang Kami</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Pusat Bantuan</a></li>
+              </ul>
+            </div>
+            <div class="col-md-2 text-right">
+              <a href="#" class="btn-login btn rounded-pill ml-2">Login</a>
+              <a href="#" class="btn-signup btn rounded-pill ml-2">Sign Up</a>
+            </div>
+          </div>
+        </div>
+    </header>
+
+    <!-- CONTENT - TITLE -->
+     <section id="title">
+      <div class="container mt-5">
+        <div class="row">
+          <div class="col-md-6">
+            <h5><b>STATUS PEMESANAN</b></h5>
+            <p class="caption">Pilih jadwal, destinasi, serta tipe kendaraan yang sesuai dengan kebutuhan Anda. Rasakan pengalaman perjalanan yang nyaman bersama layanan PMJ Trans</p>
+          </div>
+          <div class="col-md-6">
+            <div class="isi justify-content-end align-items-center"> 
+              <div class="circle">1</div>
+              <div class="string"></div>
+              <div class="circle">2</div>
+              <div class="string"></div>
+              <div class="circle-active">3</div>
+              <div class="string-active"></div>
+              <div class="circle">4</div>
+            </div>
+            <!-- <hr> -->
+          </div>
+        </div>
+      </div>
+     </section>
+
+    <!-- CONTENT -->
+     <section id="status-pemesanan">
+        <div class="container-status container">
+            <div class="text-content text-center mb-5">
+                <h6>CEK STATUS PEMESANAN</h6>
+                <h3>PMJ TRANS</h3>
+            </div>
+            <form id="cekForm">
+                <div class="row">
+                    <div class="col-md-5">
+                        <p style="font-size: 20px; font-weight: bold; color: #666666;">Kode Booking</p>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-ticket-simple"></i></span>
+                            <input id="kodeBooking" type="text" class="form-control" placeholder="Masukkan Kode Booking" aria-describedby="basic-addon1">
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <p style="font-size: 20px; font-weight: bold; color: #666666;">No. Telepon</p>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-phone"></i></span>
+                            <input id="noTelp" type="text" class="form-control" placeholder="Masukkan No. Telepon" aria-describedby="basic-addon1">
+                        </div>
+                    </div>
+                    <div class="col-md-2 mt-5">
+                        <button id="btnCek" class="btn-status" type="button">Cek</button>
+                    </div>       
+                </div>
+            </form>
+            
+            <!-- Tempat Tabel Akan Ditampilkan -->
+            <div id="result" class="mt-5"></div>
+        </div>
+     </section>
+
+
+    <!-- BUTTON -->
+     <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="d-flex justify-content-start">
+            <button class="btn-prev" type="submit"><a href="kodeBooking-page.html" style="text-decoration: none;color:white">Kembali</a></button>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="d-flex justify-content-end">
+            <button class="btn-next" type="submit"><a href="konfirmasiPemesanan-page.html" style="text-decoration: none;color:white">Selanjutnya</button>
+          </div>
+        </div>
+      </div>
+     </div>
+       
+
+
+    <!-- SCRIPT JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+    <!-- SCRIPT FUNGSI MEMUNCULKAN TABEL HASIL CEK STATUS -->
+    <script>
+        // Data pemesanan simulasi
+        const dataPemesanan = [
+            { kode: "ABC123", telp: "08123456789", nama: "Bus A", jenis: "VIP", jumlah: "1", status:"Disetujui" },
+            { kode: "XYZ456", telp: "08129876543", nama: "Bus B", jenis: "Ekonomi", jumlah: "2", status:"Menunggu" },
+            { kode: "LMN789", telp: "08121234567", nama: "Bus C", jenis: "Eksekutif", jumlah: "1", status:"Ditolak" }
+        ];
+
+        document.getElementById('btnCek').addEventListener('click', function(event) {
+            event.preventDefault(); // Mencegah form dari submit secara default
+
+            // Ambil input kode booking dan nomor telepon dari pengguna
+            const kodeBooking = document.getElementById('kodeBooking').value.trim();
+            const noTelp = document.getElementById('noTelp').value.trim();
+
+            // Cari data yang sesuai dengan kode booking dan nomor telepon
+            const hasil = dataPemesanan.find(p => p.kode === kodeBooking && p.telp === noTelp);
+
+            let resultDiv = document.getElementById('result');
+
+            if (hasil) {
+                // Jika ditemukan, tampilkan data dalam bentuk tabel
+                let table = '<div class="hasil"><p>Pemesanan Tiket PMJ Trans</p><br><table class="table custom-table"></div>'; // Tambahkan kelas custom-table
+                table += '<thead><tr><th>Nama</th><th>Jenis Armada</th><th>Jumlah Armada</th><th>Status</th></tr></thead>';
+                table += '<tbody>';
+                
+                // Tambahkan kolom status dengan kondisi untuk menentukan kelas yang sesuai
+                let statusClass = "";
+                if (hasil.status === "Disetujui") {
+                    statusClass = "status-approved";
+                } else if (hasil.status === "Menunggu") {
+                    statusClass = "status-pending";
+                } else if (hasil.status === "Ditolak") {
+                    statusClass = "status-rejected";
+                }
+                
+                table += `<tr><td>${hasil.nama}</td><td>${hasil.jenis}</td><td>${hasil.jumlah}</td><td class="${statusClass}">${hasil.status}</td></tr>`;
+                table += '</tbody></table>';
+                resultDiv.innerHTML = table;
+            }
+
+        });
+    </script>
+</body>
+</html>

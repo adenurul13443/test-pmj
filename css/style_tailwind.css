@@ -1,0 +1,368 @@
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+.bg-image {
+    bg-cover
+    bg-center
+    background-repeat: no-repeat;
+    h-96
+    relative
+    z-index: 0;
+    rounded-br-3xl
+    /* border-bottom-left-radius: 400px; */
+    
+}
+
+/* .bg-image::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+} */
+
+.bg-image::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100px; /* Sesuaikan tinggi gradasi */
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-footer {
+    background-color: transparent;
+    border-top: none;
+}
+
+
+/* Baru */
+.search-column{
+  backdrop-filter: blur(2px);
+  background-color: rgb(255 255 255 / 30%);
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+}
+.search-form{
+  margin-top: 100px;
+}
+.search-column span{
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: white;
+}
+.bg-light {
+    background-color: #f8f9fa !important;
+  }
+  
+  .navbar-brand {
+    font-weight: bold;
+  }
+  
+  .nav-link {
+    font-weight: bold;
+    color: white;
+    font-size: 14px;
+    margin-left: 20px;
+  }
+  
+  .display-4 {
+    font-size: 3.5rem !important;
+  }
+  
+  .lead {
+    font-size: 1.15rem !important;
+    color: #A8A8A8;
+  }
+  .btn-login{
+    background-color: white;
+    font-size: 14px;
+    padding: 8px 15px;
+    font-weight: bold;
+    color: black;
+    border: 1px solid white;
+    &:hover{
+        background: none;
+        border: 1px solid white;
+        color: white; 
+    }
+  }
+  .btn-signup{
+    font-size: 14px;
+    font-weight: bold;
+    padding: 8px 15px;
+    background-color: #1E9781;
+    border: 1px solid #1E9781;
+    color: white;
+    &:hover{
+        background: none;
+        border: 1px solid #1E9781;
+        color: white;
+    }
+
+  }
+  h1{
+    color: white;
+  }
+  .header-title span{
+    color: #F0BB1F;
+  }
+  .form-control{
+    background: none;
+    border: none;
+  }
+  .btn-search{
+    padding: 2px 20px;
+    border-radius: 50px;
+    width: 180px;
+    color: #1B4E7A;
+  }
+  .form-control::placeholder{
+	color: white;
+}
+/* menghilangkan date picker */
+input[type="date"]::-webkit-calendar-picker-indicator {
+    background: transparent;
+    bottom: 0;
+    color: transparent;
+    cursor: pointer;
+    height: auto;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: auto;
+    display: none;
+    -webkit-appearance: none;
+}
+input[type="date"], input[type="text"]{
+    color:white;
+}
+#why-cont{
+  margin-top: 50px;
+}
+.why-card{
+    padding: 30px 30px 20px 30px;
+    border: none;
+    background-color: white;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+
+}
+.card-text{
+    color: #A8A8A8;
+}
+.best-card{
+    border: none;
+    background-color: white;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    font-weight: bold;
+}
+.btn-view{
+    background-color: #E9F5F3;
+}
+.btn-view a{
+    text-decoration: none;
+    color: #6C946F;
+}
+#carousel{
+    margin-top: 130px;
+}
+.about-card{
+    background-color: white;
+    border: 1 px solid #A8A8A8;
+    border-radius: 20px;
+}
+#about{
+    margin-top: 130px;
+}
+
+/* Menumpuk card */
+.package-container {
+    relative
+    margin-top: -250px; /* Menggeser kartu ke atas */
+    z-index: 1; /* Memastikan kartu berada di atas banner */
+}
+
+.package-card {
+    relative
+    margin: 0 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    border: none;
+    border: 20px;
+    padding: 10px;
+    z-index: 2; /* Memastikan setiap kartu berada di atas banner */
+}
+.package-card img{
+  border-radius: 10px;
+}
+.package-card-title{
+  font-size: 18px;
+  font-weight: bold;
+}
+#cara{
+  margin-top: 50px;
+}
+.cara-icon{
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #1E9781;
+  font-size: 30px;
+  width: 80px;
+  height: 80px;
+  text-align: center;
+  margin-left: 10px;
+}
+
+.testimoni-carousel-inner{
+  padding: 20px 50px;
+  border-radius: 20px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+footer{
+  color: white;
+  background-color: #1E9781;
+}
+footer a{
+  color: white;
+  font-size: 18px;
+}
+footer i{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: white;
+  color: black;
+  text-align: center;
+  padding-top: 10px;
+  font-size: 18px;
+  margin-right: 5px;
+}
+h6{
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 50px;
+}
+/* body{
+  background-color: gray;
+} */
+
+
+
+/* ------ */
+.testi {
+  relative
+  padding: 50px;
+  text-align: center;
+  margin: 30px 300px 100px 300px;
+}
+.carousel-indicators {
+  position: absolute;
+  bottom: -100px;
+  left: 35%;
+  transform: translateX(-50%);
+}
+/* .carousel-indicators button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin: 5px;
+  background-color: #4ABDAC; 
+}
+
+.carousel-indicators{
+  background-color: #4ABDAC; 
+} */
+.carousel-control-prev,
+.carousel-control-next {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: white;
+  border: 2px solid #4ABDAC;
+  top: 50%;
+  transform: translateY(-50%);
+  &:hover{
+    background-color: #4ABDAC;
+    border: 1px solid #4ABDAC;
+  }
+}
+.carousel-control-prev {
+  left: -30px; 
+  font-size: 30px;
+  font-weight: bold;
+  color: #4ABDAC;
+  text-align: center;
+}
+.carousel-control-next {
+  right: -30px; 
+  font-size: 30px;
+  font-weight: bold;
+  color: #4ABDAC;
+  text-align: center;
+}
+
+.carousel-item .testi-img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  margin: 20px 0px;
+}
+.stars i {
+  color: #FFD700;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+.list-unstyled li{
+  margin-bottom: 10px;
+}
+.copyright{
+  background-color: white;
+  padding: 10px 0px;
+}
+
+
+/* HEADER */
+.header-scrolled {
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  color: black;
+}
+
+.header-scrolled .nav-link{
+  color: black;
+}
+
+.header-scrolled a{
+  color: black;
+}
+header {
+  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Package */
+.package-button{
+  margin: 0px -10px;
+}
+.package-button i{
+  color:#4ABDAC;
+  font-size: 25px;
+  font-weight: bold;
+  &:hover{
+    color: white;
+  }
+}
